@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation in dom</title>
+
+    <style>
+        .huge{
+            font-size: 5rem;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="h1">this is 1st line</h1>
+    <h2 id="t2">h2 tag ahe </h2>
+    <h3 id="ttt"> <strong>krishn-arjuna</strong> </h3>
+    <p id="para">Lorem ipsum dolor sit.</p>
+
+    <div id="c1">
+        <ul>
+            <li> hello 1</li>
+            <li> hello 2</li>
+            <li> hello 3</li>
+            <li> hello 4</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        kay kay
+        <ul> item 1</ul>
+        <ul> item 2</ul>
+        <ul> item 3</ul>
+        <ul> item 4</ul>
+    </div>
+
+
+    <div>
+        <input type="checkbox" > <button>click me </button>
+    </div><hr><hr>
+
+
+    <div class="moth">
+        size mothi ani blue color kelay
+    </div><hr><hr>
+
+    <h3>  <a href="https://www.google.com/">bing</a>  </h3>
+
+    <script>
+
+
+        // document.getElementById(" ") - selects only tag with mention id name 
+        let heading = document.getElementById("h1");
+        console.log(heading)
+
+        let paragraph = document.getElementById("para")
+        console.log(paragraph)
+
+
+
+        // document.getElementByClassName - selects that tag with mention class name 
+        let r = document.getElementsByClassName("container");
+        console.log(r);
+
+
+
+        // .innerHTML - selects the html code written in specified tag 
+        let text = document.getElementById("h1").innerHTML
+        console.log(text)
+        let str = document.getElementById("c1").innerHTML;
+        console.log(str);
+
+        // you can add html code to it also by innerhtml
+        document.querySelector("#t2").innerHTML="<i>this is 2nd</i>"
+
+
+        // textcontent - only return text not the html tags 
+        console.log( document.getElementById("ttt").textContent )
+
+
+        // modification
+        var mod = document.getElementById("para").innerText = document.getElementById("h1").innerHTML;
+        console.log( mod )
+
+
+
+        // document.querrySelector
+        let res = document.querySelector(".container").innerHTML
+        console.log(res)
+        let res2 = document.querySelector("#h1").innerHTML
+        console.log(res2)
+        let res3 = document.querySelector(".container>ul").innerHTML
+        console.log(res3)
+
+
+
+         // document.querrySelectorAll
+         let res4 = document.querySelectorAll(".container ul").innerHTML
+        console.log(res4)
+         let res5 = document.querySelector("#c1 ul").innerHTML
+        console.log(res5)
+
+
+
+        // change color by js 
+        document.getElementById("h1").style.color="red"
+
+        // for classes its plural so it will return array of those class elements so we have to select by indexing 
+        document.getElementsByClassName("container")[0].style.color = "red"
+
+        
+        // here this is query selector and by input value and click function we can tick the checkbox 
+        document.querySelector("input").click();
+        document.querySelector("button").style.backgroundColor="yellow"
+
+
+        // adding classes in tag 
+        document.querySelector(".moth").classList.add("huge"); 
+        // this adds huge class in the div tag whose class is moth
+
+
+        // setting attributes
+        document.querySelector("a").setAttribute("href","https://www.bing.com/")
+
+    </script>
+
+
+</body>
+</html>

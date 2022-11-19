@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        #btn{
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>heading</h1>
+    <div id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea aut, sed fugit corrupti quisquam temporibus, neque sapiente, aliquam quibusdam laborum! Aliquid sint minus esse dolore iusto, eum assumenda aut nesciunt voluptatum, iure eos obcaecati ad sed ut vitae animi quibusdam? Eaque magni optio, molestiae vero in nobis autem sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nihil doloribus, expedita deleniti excepturi iure sunt totam? Accusamus porro quas asperiores consequatur itaque, repudiandae architecto necessitatibus saepe voluptatem nemo labore totam aperiam cum suscipit tenetur ad expedita facere maxime eaque voluptate reprehenderit. Eaque fugiat reprehenderit maiores modi, veritatis cumque esse fugit. Hic dolore eum culpa minus nostrum recusandae accusamus necessitatibus nam natus excepturi ipsum nihil, cum magnam laborum deleniti vitae dolores, velit tempore veniam! Iste mollitia molestiae quod in enim! Soluta similique minima mollitia beatae tenetur, perspiciatis neque et sed molestias alias, nesciunt repellendus sapiente labore, quaerat quis expedita provident!</div><br>
+
+    <button id="btn" onclick="toggle()"> hide/show </button>
+
+    
+    <script>
+        
+        function toggle(){
+            let para = document.getElementById("para")
+            if(para.style.display != 'none')
+            {
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block'
+            }
+        }
+
+        // addEventListener
+        para.addEventListener('mouseover', function run(){
+            alert("mouse is inside ")
+        })
+
+        para.addEventListener('mouseout', function run(){
+            alert("mouse went outside ")
+        })
+    </script>
+</body>
+</html>

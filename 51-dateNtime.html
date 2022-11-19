@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date n time</title>
+</head>
+<body>
+    <div>this is date and time </div>
+    <script>
+        // date and time 
+        let nowTime = new Date();
+        console.log(nowTime)
+
+        // start reference
+        let dt = new Date(0)
+        let dt1 = new Date(10000)
+        console.log(dt)
+        console.log(dt1)
+        // dt1 10 sec age ka time dikhayega start se 
+
+        let dt2 = new Date( 2022, 0 ,22, 18,30,39 , 47)
+        console.log(dt2)
+        // date ( year , month , date , hour , minute , sec , millisec)
+
+        let yr = dt2.getFullYear();
+        console.log("year : " + yr)
+
+        let mt = dt2.getMonth();
+        console.log("month : " + mt)
+
+        let hr = dt2.getHours();
+        console.log("hour : " + hr)
+
+        let min = dt2.getMinutes();
+        console.log("minute : " + min)
+
+        let s = dt2.getSeconds();
+        console.log("seconds : " + s)
+
+        // setdate()
+        dt2.setDate(14)
+        console.log(dt2)
+
+        dt2.setDate(44)
+        // apneaap recover kr lega
+        console.log(dt2)
+
+        console.log(Date.now())
+        // prints total secends from start to now
+
+        
+
+    </script>
+    
+</body>
+</html>

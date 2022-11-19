@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and SetTimeOut</title>
+</head>
+<body>
+    <div >
+        the time is : <span id="time"></span>
+    </div>
+
+    <script>
+        // setTimeOut --> allows us to run the function once after the interval of time 
+        // clearTimeOut -->  allows us to run the function repeatedly after the interval of time 
+
+        function greet(n)
+        {
+            console.log(" hello "+ n)
+        }
+        setTimeout(greet,5000,"harry")
+        // settimeout(funcName_without_() , timeinterval_in_ms , parameter_list )
+
+        let to = setTimeout(greet,5000,"ash")
+        console.log(to)
+        clearTimeout(to)
+        // clear karel je timout schedule kelt 
+
+        let si = setInterval(greet,2000,"ash")
+        // 2 sec interval nantr punha print krt jail
+
+        clearInterval(si)
+        // cancels the setinterval
+
+        function time(){
+            time= new Date();
+            document.getElementById('time').innerHTML = time
+        }
+        setInterval(time,1000)
+    </script>
+</body>
+</html>

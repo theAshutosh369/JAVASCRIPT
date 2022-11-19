@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings and their methods </title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempore et laborum recusandae eius iure odit dignissimos aspernatur magni veniam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, odio, ullam totam minima enim fuga magnam sit harum ad esse porro officia illum, id quae quia! Amet voluptates aperiam minus aut aliquid. Cupiditate deserunt, assumenda possimus eum culpa enim sint.</p>
+    </div>
+
+    <script>
+        // strings
+        var str = " auto "
+        var fname = "ashutosh"
+        var lname = " birajdar "
+        console.log(str)
+        console.log(fname+lname)
+
+
+
+        console.log("------${}--------------")
+        // 1 chya left la je key ahe te vapraychay 
+        var fullname = `the first name is ${fname} and last name is ${lname} `
+        console.log(fullname)
+
+
+
+        console.log("------length of string---------")
+        var len = fname.length;
+        console.log("length of fname is :"+len)
+
+
+
+        console.log("---------escape seq. charactors(\\n\\t)----------- " );
+        console.log(" hello world \n this \t \t is ashutosh birajdar ")
+
+
+        console.log("---------indexOf()----------- ");
+        var s = "this is a string "
+        console.log("index of first 'is' in s is = "+s.indexOf('is'))
+
+        // lastIndexof()
+        var s = "this is a string "
+        console.log("index of last 'is' in s is = "+s.lastIndexOf('is'))
+
+        // slice( _ , _ )
+        var s = "this is a string "
+        console.log("the substring from 10 to 17 index in s is  = "+ s.slice(10,17))
+
+        // substring( _ , _ )
+        var s = "this is a string "
+        console.log("substring forward  = "+s.substring(10,17))
+        console.log("substring reverse  = "+s.substring(17,10))
+
+        // substr(start , no.of.characters.from.start)
+        var s = "this is a string "
+        console.log("substring forward  = "+s.substr(10,3))
+        console.log("substring forward  = "+s.substr(1,10))
+        // 10th position pasun kiti characters pahije tevdhe lihaych
+
+        // replace( old.word , new.word )
+        var s = "this is a string "
+        console.log("string after replacing the word 'is' by 'was' is = "+ s.replace('is','was',  ))
+
+        // uppercase and lowercase 
+        var s = "THIS is a string "
+        console.log("the string in uppercase = "+s.toUpperCase())
+        console.log("the string in lowercase = "+s.toLowerCase())
+
+        // charAt()
+        var a = "this is paragraph"
+        console.log(" character at 3 = "+a.charAt(3))
+
+    </script>
+    
+</body>
+</html>

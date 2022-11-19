@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays n objects</title>
+</head>
+<body>
+    <div>hello </div>
+    <script>
+        // arrays
+        let a = [ 10,"ashu", null , 2.4 , 0 ]
+        // sort function 
+        console.log(a.sort())
+
+        console.log( typeof(a) )
+
+        // printing all elements
+        for(i=0;i<a.length;i++)
+        {
+            console.log(a[i])
+        }
+
+        console.log(" a includes 2.4 ? : "+ a.includes(2.4) )
+
+        console.log("----------------")
+        a.push("cwh")
+        for(i=0;i<a.length;i++)
+        {
+            console.log(a[i])
+        }
+        
+
+        // objects
+        console.log("------------------objects--------------")
+        let ob = { name:"ash" , rollno : 23303, clg: "pict", id:1}
+        console.log(typeof(ob))
+
+        console.log(ob)
+        console.log("2nd element value in object is : "+ob.clg)
+
+    </script>
+    
+</body>
+</html>
